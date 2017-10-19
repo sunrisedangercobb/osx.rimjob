@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+APP_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+APP_NAME="$(basename "$0")"
+BASE_APP_PATH=`echo $APP_PATH | sed -e 's/MacOS/Resources/g'`
+
+echo $APP_PATH
+echo $APP_NAME
+
+#play rimshot
+
+string="afplay ${BASE_APP_PATH}/sounds/${APP_NAME}.mp3"
+
+$string
+
